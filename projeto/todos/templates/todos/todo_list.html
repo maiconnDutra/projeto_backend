@@ -4,7 +4,7 @@
 
     {% for todo in todo_list %}
 
-        <li>{{ todo.title }} - <a href="{% url 'todo_update' todo.pk %}">Editar</a></li>
+        <li>{{ todo.title }} - <a href="{% url 'todo_update' todo.pk %}">Editar</a> <a href="{% url 'todo_delete' todo.pk %}">Apagar</a> </li>
     
     {% endfor %}
 
