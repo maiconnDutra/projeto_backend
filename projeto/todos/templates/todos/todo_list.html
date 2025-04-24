@@ -1,12 +1,13 @@
-<h1>Todo List</h1>
-
-<a href="{% url 'todo_create' %}">Nova Tarefa</a>
+<h1>Listar</h1>
 
 <ul>
-    {% for todo in todo_list%}
 
-    <li>{{todo.title}}</li>
+    {% for todo in todo_list %}
 
+        <li>{{ todo.title }} - <a href="{% url 'todo_update' todo.pk %}">Editar</a></li>
+    
     {% endfor %}
 
 </ul>
+
+<a href="{% url 'todo_create' %}">Nova tarefa</a>
